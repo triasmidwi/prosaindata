@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; My sample book</title>
+    <title>Task 1 (Crawling Data From Twitter according Location) &#8212; My sample book</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -111,7 +111,14 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Task 1 (Crawling Data From Twitter according Location)
+  </a>
+ </li>
+</ul>
+
     </div>
 </nav></div>
         <div class="bd-sidebar__bottom">
@@ -315,7 +322,22 @@ title="Print to PDF"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="simple visible nav section-nav flex-column">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Task 1 (Crawling Data From Twitter according Location)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-2-crawling-data-from-website-detik-com">
+   Task 2 (Crawling Data From Website detik.com)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-3-scraping-data-from-pta-trunojoyo-ac-id">
+   Task 3 (Scraping Data from pta.trunojoyo.ac.id)
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -325,7 +347,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1><no title></h1>
+                <h1>Task 1 (Crawling Data From Twitter according Location)</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -334,7 +356,22 @@ title="Print to PDF"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="simple visible nav section-nav flex-column">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Task 1 (Crawling Data From Twitter according Location)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-2-crawling-data-from-website-detik-com">
+   Task 2 (Crawling Data From Website detik.com)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-3-scraping-data-from-pta-trunojoyo-ac-id">
+   Task 3 (Scraping Data from pta.trunojoyo.ac.id)
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -345,12 +382,22 @@ title="Print to PDF"
                 
               <div>
                 
-  <p>#Crawling Data</p>
-<p>#Task 1 (Crawling Data From Twitter according Location)</p>
+  <p>#Crawling Data
+Data crawling adalah proses automatis untuk mengumpulkan dan mengindeks data dari berbagai sumber seperti situs web, database, atau dokumen. Proses ini menggunakan software atau aplikasi khusus yang disebut “crawler” untuk mengakses sumber data dan mengambil informasi yang dibutuhkan. Data yang dikumpulkan melalui crawling kemudian dapat diproses dan digunakan untuk berbagai tujuan, seperti analisis data, penelitian, atau pengembangan sistem informasi.</p>
+<p>Tujuan Crawling Data</p>
+<ul class="simple">
+<li><p>Pengumpulan data besar: Mengumpulkan data besar dari berbagai sumber seperti situs web, database, atau dokumen dalam waktu singkat dan efisien.</p></li>
+<li><p>Analisis data: Menggunakan data yang dikumpulkan untuk melakukan analisis data seperti analisis pasar, analisis perilaku pelanggan, dan lain-lain.</p></li>
+<li><p>Penelitian: Menggunakan data yang dikumpulkan untuk melakukan penelitian seperti penelitian pasar, penelitian sosial, dan lain-lain.</p></li>
+<li><p>Pembuatan database: Membuat database yang mengandung informasi dari berbagai sumber seperti situs web, database, atau dokumen</p></li>
+<li><p>Pemantauan informasi: Memantau informasi dari berbagai sumber seperti media sosial, situs web, dan lain-lain untuk memastikan bahwa informasi yang diterima akurat dan up-to-date.</p></li>
+<li><p>Pembuatan aplikasi: Menggunakan data yang dikumpulkan untuk membangun aplikasi seperti aplikasi pencarian, aplikasi e-commerce, dan lain-lain.</p></li>
+</ul>
+<div class="section" id="task-1-crawling-data-from-twitter-according-location">
+<h1>Task 1 (Crawling Data From Twitter according Location)<a class="headerlink" href="#task-1-crawling-data-from-twitter-according-location" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#scraping data from twitter without an APIs</span>
-
 <span class="c1">#install library</span>
 <span class="o">!</span>pip install twint
 <span class="o">!</span>pip install nest_asyncio
@@ -360,26 +407,26 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
 Requirement already satisfied: twint in /usr/local/lib/python3.8/dist-packages (2.1.20)
-Requirement already satisfied: schedule in /usr/local/lib/python3.8/dist-packages (from twint) (1.1.0)
-Requirement already satisfied: cchardet in /usr/local/lib/python3.8/dist-packages (from twint) (2.1.7)
-Requirement already satisfied: geopy in /usr/local/lib/python3.8/dist-packages (from twint) (1.17.0)
-Requirement already satisfied: googletransx in /usr/local/lib/python3.8/dist-packages (from twint) (2.4.2)
-Requirement already satisfied: aiohttp-socks in /usr/local/lib/python3.8/dist-packages (from twint) (0.8.0)
 Requirement already satisfied: aiohttp in /usr/local/lib/python3.8/dist-packages (from twint) (3.8.4)
-Requirement already satisfied: elasticsearch in /usr/local/lib/python3.8/dist-packages (from twint) (8.6.2)
-Requirement already satisfied: aiodns in /usr/local/lib/python3.8/dist-packages (from twint) (3.0.0)
-Requirement already satisfied: pysocks in /usr/local/lib/python3.8/dist-packages (from twint) (1.7.1)
-Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.8/dist-packages (from twint) (4.6.3)
-Requirement already satisfied: fake-useragent in /usr/local/lib/python3.8/dist-packages (from twint) (1.1.1)
 Requirement already satisfied: pandas in /usr/local/lib/python3.8/dist-packages (from twint) (1.3.5)
+Requirement already satisfied: pysocks in /usr/local/lib/python3.8/dist-packages (from twint) (1.7.1)
+Requirement already satisfied: geopy in /usr/local/lib/python3.8/dist-packages (from twint) (1.17.0)
+Requirement already satisfied: aiohttp-socks in /usr/local/lib/python3.8/dist-packages (from twint) (0.8.0)
+Requirement already satisfied: elasticsearch in /usr/local/lib/python3.8/dist-packages (from twint) (8.6.2)
+Requirement already satisfied: schedule in /usr/local/lib/python3.8/dist-packages (from twint) (1.1.0)
+Requirement already satisfied: googletransx in /usr/local/lib/python3.8/dist-packages (from twint) (2.4.2)
+Requirement already satisfied: aiodns in /usr/local/lib/python3.8/dist-packages (from twint) (3.0.0)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.8/dist-packages (from twint) (4.6.3)
+Requirement already satisfied: cchardet in /usr/local/lib/python3.8/dist-packages (from twint) (2.1.7)
+Requirement already satisfied: fake-useragent in /usr/local/lib/python3.8/dist-packages (from twint) (1.1.1)
 Requirement already satisfied: pycares&gt;=4.0.0 in /usr/local/lib/python3.8/dist-packages (from aiodns-&gt;twint) (4.3.0)
-Requirement already satisfied: async-timeout&lt;5.0,&gt;=4.0.0a3 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (4.0.2)
-Requirement already satisfied: charset-normalizer&lt;4.0,&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (3.0.1)
-Requirement already satisfied: frozenlist&gt;=1.1.1 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.3.3)
-Requirement already satisfied: aiosignal&gt;=1.1.2 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.3.1)
 Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.8.2)
 Requirement already satisfied: attrs&gt;=17.3.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (21.4.0)
+Requirement already satisfied: frozenlist&gt;=1.1.1 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.3.3)
+Requirement already satisfied: charset-normalizer&lt;4.0,&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (3.0.1)
 Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (6.0.4)
+Requirement already satisfied: aiosignal&gt;=1.1.2 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.3.1)
+Requirement already satisfied: async-timeout&lt;5.0,&gt;=4.0.0a3 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (4.0.2)
 Requirement already satisfied: python-socks[asyncio]&lt;3.0.0,&gt;=2.0.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-socks-&gt;twint) (2.1.1)
 Requirement already satisfied: elastic-transport&lt;9,&gt;=8 in /usr/local/lib/python3.8/dist-packages (from elasticsearch-&gt;twint) (8.4.0)
 Requirement already satisfied: importlib-resources&gt;=5.0 in /usr/local/lib/python3.8/dist-packages (from fake-useragent-&gt;twint) (5.10.2)
@@ -635,7 +682,9 @@ Requirement already satisfied: nest_asyncio in /usr/local/lib/python3.8/dist-pac
 </div>
 </div>
 </div>
-<p>#Task 2 (Crawling Data From Website <a class="reference external" href="http://detik.com">detik.com</a>)</p>
+</div>
+<div class="section" id="task-2-crawling-data-from-website-detik-com">
+<h1>Task 2 (Crawling Data From Website <a class="reference external" href="http://detik.com">detik.com</a>)<a class="headerlink" href="#task-2-crawling-data-from-website-detik-com" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span> <span class="k">as</span> <span class="nn">req</span>
@@ -690,7 +739,9 @@ Requirement already satisfied: nest_asyncio in /usr/local/lib/python3.8/dist-pac
 </div>
 </div>
 </div>
-<p>#Task 3 (Scraping Data from <a class="reference external" href="http://pta.trunojoyo.ac.id">pta.trunojoyo.ac.id</a>)</p>
+</div>
+<div class="section" id="task-3-scraping-data-from-pta-trunojoyo-ac-id">
+<h1>Task 3 (Scraping Data from <a class="reference external" href="http://pta.trunojoyo.ac.id">pta.trunojoyo.ac.id</a>)<a class="headerlink" href="#task-3-scraping-data-from-pta-trunojoyo-ac-id" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span> <span class="k">as</span> <span class="nn">req</span>
@@ -943,6 +994,7 @@ Requirement already satisfied: nest_asyncio in /usr/local/lib/python3.8/dist-pac
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">twitter_scrapper</span> <span class="kn">import</span> <span class="n">get_tweets</span>
 </pre></div>
+</div>
 </div>
 </div>
 </div>
