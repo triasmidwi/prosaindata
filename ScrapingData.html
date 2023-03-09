@@ -157,7 +157,6 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Crawling Data (Task 1)</a></li>
-
 <li class="toctree-l1"><a class="reference internal" href="Pipeline.html">PipeLine</a></li>
 </ul>
 
@@ -352,15 +351,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Crawling Data (Task 1)</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1-crawling-data-from-twitter-according-location">Task 1 (Crawling Data From Twitter according Location)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-crawling-data-from-website-detik-com">Task 2 (Crawling Data From Website detik.com)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3-scraping-data-from-pta-trunojoyo-ac-id">Task 3 (Scraping Data from pta.trunojoyo.ac.id)</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pipeline">PipeLine</a></li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -396,14 +390,14 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
 Requirement already satisfied: snscrape in /usr/local/lib/python3.9/dist-packages (0.6.0.20230303)
-Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.9/dist-packages (from snscrape) (4.6.3)
 Requirement already satisfied: filelock in /usr/local/lib/python3.9/dist-packages (from snscrape) (3.9.0)
-Requirement already satisfied: lxml in /usr/local/lib/python3.9/dist-packages (from snscrape) (4.9.2)
 Requirement already satisfied: requests[socks] in /usr/local/lib/python3.9/dist-packages (from snscrape) (2.25.1)
-Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2.10)
+Requirement already satisfied: lxml in /usr/local/lib/python3.9/dist-packages (from snscrape) (4.9.2)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.9/dist-packages (from snscrape) (4.6.3)
 Requirement already satisfied: chardet&lt;5,&gt;=3.0.2 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (4.0.0)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2022.12.7)
 Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (1.26.14)
+Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2.10)
 Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (1.7.1)
 </pre></div>
 </div>
@@ -413,57 +407,57 @@ Requirement already satisfied: tqdm in /usr/local/lib/python3.9/dist-packages (4
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
 Requirement already satisfied: ipywidgets in /usr/local/lib/python3.9/dist-packages (7.7.1)
-Requirement already satisfied: ipykernel&gt;=4.5.1 in /usr/local/lib/python3.9/dist-packages (from ipywidgets) (5.3.4)
-Requirement already satisfied: jupyterlab-widgets&gt;=1.0.0 in /usr/local/lib/python3.9/dist-packages (from ipywidgets) (3.0.5)
 Requirement already satisfied: ipython&gt;=4.0.0 in /usr/local/lib/python3.9/dist-packages (from ipywidgets) (7.9.0)
-Requirement already satisfied: traitlets&gt;=4.3.1 in /usr/local/lib/python3.9/dist-packages (from ipywidgets) (5.7.1)
-Requirement already satisfied: ipython-genutils~=0.2.0 in /usr/local/lib/python3.9/dist-packages (from ipywidgets) (0.2.0)
 Requirement already satisfied: widgetsnbextension~=3.6.0 in /usr/local/lib/python3.9/dist-packages (from ipywidgets) (3.6.2)
-Requirement already satisfied: tornado&gt;=4.2 in /usr/local/lib/python3.9/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets) (6.2)
+Requirement already satisfied: ipykernel&gt;=4.5.1 in /usr/local/lib/python3.9/dist-packages (from ipywidgets) (5.3.4)
+Requirement already satisfied: ipython-genutils~=0.2.0 in /usr/local/lib/python3.9/dist-packages (from ipywidgets) (0.2.0)
+Requirement already satisfied: jupyterlab-widgets&gt;=1.0.0 in /usr/local/lib/python3.9/dist-packages (from ipywidgets) (3.0.5)
+Requirement already satisfied: traitlets&gt;=4.3.1 in /usr/local/lib/python3.9/dist-packages (from ipywidgets) (5.7.1)
 Requirement already satisfied: jupyter-client in /usr/local/lib/python3.9/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets) (6.1.12)
-Requirement already satisfied: backcall in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (0.2.0)
-Requirement already satisfied: prompt-toolkit&lt;2.1.0,&gt;=2.0.0 in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (2.0.10)
+Requirement already satisfied: tornado&gt;=4.2 in /usr/local/lib/python3.9/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets) (6.2)
 Requirement already satisfied: jedi&gt;=0.10 in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (0.18.2)
 Requirement already satisfied: decorator in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (4.4.2)
-Requirement already satisfied: setuptools&gt;=18.5 in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (57.4.0)
-Requirement already satisfied: pickleshare in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (0.7.5)
 Requirement already satisfied: pygments in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (2.14.0)
+Requirement already satisfied: backcall in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (0.2.0)
+Requirement already satisfied: setuptools&gt;=18.5 in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (57.4.0)
 Requirement already satisfied: pexpect in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (4.8.0)
+Requirement already satisfied: pickleshare in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (0.7.5)
+Requirement already satisfied: prompt-toolkit&lt;2.1.0,&gt;=2.0.0 in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (2.0.10)
 Requirement already satisfied: notebook&gt;=4.4.1 in /usr/local/lib/python3.9/dist-packages (from widgetsnbextension~=3.6.0-&gt;ipywidgets) (6.3.0)
 Requirement already satisfied: parso&lt;0.9.0,&gt;=0.8.0 in /usr/local/lib/python3.9/dist-packages (from jedi&gt;=0.10-&gt;ipython&gt;=4.0.0-&gt;ipywidgets) (0.8.3)
-Requirement already satisfied: prometheus-client in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.16.0)
-Requirement already satisfied: pyzmq&gt;=17 in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (23.2.1)
-Requirement already satisfied: argon2-cffi in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (21.3.0)
-Requirement already satisfied: Send2Trash&gt;=1.5.0 in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (1.8.0)
 Requirement already satisfied: nbformat in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (5.7.3)
-Requirement already satisfied: jinja2 in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (3.1.2)
-Requirement already satisfied: nbconvert in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (6.5.4)
 Requirement already satisfied: terminado&gt;=0.8.3 in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.17.1)
+Requirement already satisfied: Send2Trash&gt;=1.5.0 in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (1.8.0)
 Requirement already satisfied: jupyter-core&gt;=4.6.1 in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (5.2.0)
+Requirement already satisfied: nbconvert in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (6.5.4)
+Requirement already satisfied: jinja2 in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (3.1.2)
+Requirement already satisfied: prometheus-client in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.16.0)
+Requirement already satisfied: argon2-cffi in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (21.3.0)
+Requirement already satisfied: pyzmq&gt;=17 in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (23.2.1)
 Requirement already satisfied: python-dateutil&gt;=2.1 in /usr/local/lib/python3.9/dist-packages (from jupyter-client-&gt;ipykernel&gt;=4.5.1-&gt;ipywidgets) (2.8.2)
 Requirement already satisfied: six&gt;=1.9.0 in /usr/local/lib/python3.9/dist-packages (from prompt-toolkit&lt;2.1.0,&gt;=2.0.0-&gt;ipython&gt;=4.0.0-&gt;ipywidgets) (1.15.0)
 Requirement already satisfied: wcwidth in /usr/local/lib/python3.9/dist-packages (from prompt-toolkit&lt;2.1.0,&gt;=2.0.0-&gt;ipython&gt;=4.0.0-&gt;ipywidgets) (0.2.6)
 Requirement already satisfied: ptyprocess&gt;=0.5 in /usr/local/lib/python3.9/dist-packages (from pexpect-&gt;ipython&gt;=4.0.0-&gt;ipywidgets) (0.7.0)
 Requirement already satisfied: platformdirs&gt;=2.5 in /usr/local/lib/python3.9/dist-packages (from jupyter-core&gt;=4.6.1-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (3.1.0)
+Requirement already satisfied: argon2-cffi-bindings in /usr/local/lib/python3.9/dist-packages (from argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (21.2.0)
+Requirement already satisfied: MarkupSafe&gt;=2.0 in /usr/local/lib/python3.9/dist-packages (from jinja2-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (2.1.2)
+Requirement already satisfied: packaging in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (23.0)
+Requirement already satisfied: tinycss2 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (1.2.1)
+Requirement already satisfied: entrypoints&gt;=0.2.2 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.4)
+Requirement already satisfied: nbclient&gt;=0.5.0 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.5.13)
+Requirement already satisfied: defusedxml in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.7.1)
+Requirement already satisfied: lxml in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (4.9.2)
+Requirement already satisfied: bleach in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (6.0.0)
+Requirement already satisfied: pandocfilters&gt;=1.4.1 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (1.5.0)
+Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.8.4)
+Requirement already satisfied: jupyterlab-pygments in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.2.2)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (4.6.3)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: argon2-cffi-bindings in /usr/local/lib/python3.9/dist-packages (from argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (21.2.0)
-Requirement already satisfied: MarkupSafe&gt;=2.0 in /usr/local/lib/python3.9/dist-packages (from jinja2-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (2.1.2)
-Requirement already satisfied: pandocfilters&gt;=1.4.1 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (1.5.0)
-Requirement already satisfied: jupyterlab-pygments in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.2.2)
-Requirement already satisfied: entrypoints&gt;=0.2.2 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.4)
-Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (4.6.3)
-Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.8.4)
-Requirement already satisfied: lxml in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (4.9.2)
-Requirement already satisfied: nbclient&gt;=0.5.0 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.5.13)
-Requirement already satisfied: tinycss2 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (1.2.1)
-Requirement already satisfied: defusedxml in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.7.1)
-Requirement already satisfied: packaging in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (23.0)
-Requirement already satisfied: bleach in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (6.0.0)
-Requirement already satisfied: fastjsonschema in /usr/local/lib/python3.9/dist-packages (from nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (2.16.3)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: fastjsonschema in /usr/local/lib/python3.9/dist-packages (from nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (2.16.3)
 Requirement already satisfied: jsonschema&gt;=2.6 in /usr/local/lib/python3.9/dist-packages (from nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (4.3.3)
-Requirement already satisfied: attrs&gt;=17.4.0 in /usr/local/lib/python3.9/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (22.2.0)
 Requirement already satisfied: pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,&gt;=0.14.0 in /usr/local/lib/python3.9/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.19.3)
+Requirement already satisfied: attrs&gt;=17.4.0 in /usr/local/lib/python3.9/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (22.2.0)
 Requirement already satisfied: nest-asyncio in /usr/local/lib/python3.9/dist-packages (from nbclient&gt;=0.5.0-&gt;nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (1.5.6)
 Requirement already satisfied: cffi&gt;=1.0.1 in /usr/local/lib/python3.9/dist-packages (from argon2-cffi-bindings-&gt;argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (1.15.1)
 Requirement already satisfied: webencodings in /usr/local/lib/python3.9/dist-packages (from bleach-&gt;nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.5.1)
@@ -503,7 +497,7 @@ Requirement already satisfied: pycparser in /usr/local/lib/python3.9/dist-packag
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "99a907680abb4de387404c46cb82918b"}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "f9960ff87eac4132aba496ec8d7f2e15"}</script></div>
 </div>
 </div>
 <div class="section" id="task-2-crawling-data-from-website-detik-com">
@@ -624,6 +618,9 @@ Requirement already satisfied: pycparser in /usr/local/lib/python3.9/dist-packag
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>23
 </pre></div>
 </div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>24
+</pre></div>
+</div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
 <span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="mf">47278e6</span><span class="n">a611b</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">news</span><span class="o">=</span><span class="n">scrape_detik</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
@@ -681,62 +678,67 @@ Requirement already satisfied: pycparser in /usr/local/lib/python3.9/dist-packag
 <span class="g g-Whitespace">    </span><span class="mi">705</span>                 <span class="n">method</span><span class="p">,</span>
 
 <span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">_make_request</span><span class="nt">(self, conn, method, url, timeout, chunked, **httplib_request_kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">447</span>                     <span class="c1"># Python 3 (including for exceptions like SystemExit).</span>
-<span class="g g-Whitespace">    </span><span class="mi">448</span>                     <span class="c1"># Otherwise it looks like a bug in the code.</span>
-<span class="ne">--&gt; </span><span class="mi">449</span>                     <span class="n">six</span><span class="o">.</span><span class="n">raise_from</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">450</span>         <span class="k">except</span> <span class="p">(</span><span class="n">SocketTimeout</span><span class="p">,</span> <span class="n">BaseSSLError</span><span class="p">,</span> <span class="n">SocketError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">451</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_raise_timeout</span><span class="p">(</span><span class="n">err</span><span class="o">=</span><span class="n">e</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">timeout_value</span><span class="o">=</span><span class="n">read_timeout</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">384</span>         <span class="c1"># Trigger any extra validation we need to do.</span>
+<span class="g g-Whitespace">    </span><span class="mi">385</span>         <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">386</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_validate_conn</span><span class="p">(</span><span class="n">conn</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">387</span>         <span class="k">except</span> <span class="p">(</span><span class="n">SocketTimeout</span><span class="p">,</span> <span class="n">BaseSSLError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">388</span>             <span class="c1"># Py2 raises this as a BaseSSLError, Py3 raises it as socket timeout.</span>
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/packages/six.py</span> in <span class="ni">raise_from</span><span class="nt">(value, from_value)</span>
+<span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">_validate_conn</span><span class="nt">(self, conn)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1040</span>         <span class="c1"># Force connect early to allow us to validate the connection.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1041</span>         <span class="k">if</span> <span class="ow">not</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;sock&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span>  <span class="c1"># AppEngine might not have  `.sock`</span>
+<span class="ne">-&gt; </span><span class="mi">1042</span>             <span class="n">conn</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1043</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1044</span>         <span class="k">if</span> <span class="ow">not</span> <span class="n">conn</span><span class="o">.</span><span class="n">is_verified</span><span class="p">:</span>
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">_make_request</span><span class="nt">(self, conn, method, url, timeout, chunked, **httplib_request_kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">442</span>                 <span class="c1"># Python 3</span>
-<span class="g g-Whitespace">    </span><span class="mi">443</span>                 <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">444</span>                     <span class="n">httplib_response</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">445</span>                 <span class="k">except</span> <span class="ne">BaseException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">446</span>                     <span class="c1"># Remove the TypeError from the exception chain in</span>
+<span class="nn">/usr/local/lib/python3.9/dist-packages/snscrape/base.py</span> in <span class="ni">connect</span><span class="nt">(self, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">139</span> <span class="k">class</span> <span class="nc">_HTTPSConnection</span><span class="p">(</span><span class="n">urllib3</span><span class="o">.</span><span class="n">connection</span><span class="o">.</span><span class="n">HTTPSConnection</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">140</span>         <span class="k">def</span> <span class="nf">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">141</span>                 <span class="n">conn</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">142</span>                 <span class="c1">#FIXME: Uses undocumented attribute self.sock and beyond.</span>
+<span class="g g-Whitespace">    </span><span class="mi">143</span>                 <span class="k">try</span><span class="p">:</span>
 
-<span class="nn">/usr/lib/python3.9/http/client.py</span> in <span class="ni">getresponse</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1375</span>         <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1376</span>             <span class="k">try</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1377</span>                 <span class="n">response</span><span class="o">.</span><span class="n">begin</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1378</span>             <span class="k">except</span> <span class="ne">ConnectionError</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1379</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/connection.py</span> in <span class="ni">connect</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">412</span>             <span class="n">context</span><span class="o">.</span><span class="n">load_default_certs</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">413</span> 
+<span class="ne">--&gt; </span><span class="mi">414</span>         <span class="bp">self</span><span class="o">.</span><span class="n">sock</span> <span class="o">=</span> <span class="n">ssl_wrap_socket</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">415</span>             <span class="n">sock</span><span class="o">=</span><span class="n">conn</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">416</span>             <span class="n">keyfile</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">key_file</span><span class="p">,</span>
 
-<span class="nn">/usr/lib/python3.9/http/client.py</span> in <span class="ni">begin</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">318</span>         <span class="c1"># read until we get a non-100 response</span>
-<span class="g g-Whitespace">    </span><span class="mi">319</span>         <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">320</span>             <span class="n">version</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">reason</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read_status</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">321</span>             <span class="k">if</span> <span class="n">status</span> <span class="o">!=</span> <span class="n">CONTINUE</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">322</span>                 <span class="k">break</span>
+<span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/util/ssl_.py</span> in <span class="ni">ssl_wrap_socket</span><span class="nt">(sock, keyfile, certfile, cert_reqs, ca_certs, server_hostname, ssl_version, ciphers, ssl_context, ca_cert_dir, key_password, ca_cert_data, tls_in_tls)</span>
+<span class="g g-Whitespace">    </span><span class="mi">447</span> 
+<span class="g g-Whitespace">    </span><span class="mi">448</span>     <span class="k">if</span> <span class="n">send_sni</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">449</span>         <span class="n">ssl_sock</span> <span class="o">=</span> <span class="n">_ssl_wrap_socket_impl</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">450</span>             <span class="n">sock</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">tls_in_tls</span><span class="p">,</span> <span class="n">server_hostname</span><span class="o">=</span><span class="n">server_hostname</span>
+<span class="g g-Whitespace">    </span><span class="mi">451</span>         <span class="p">)</span>
 
-<span class="nn">/usr/lib/python3.9/http/client.py</span> in <span class="ni">_read_status</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">279</span> 
-<span class="g g-Whitespace">    </span><span class="mi">280</span>     <span class="k">def</span> <span class="nf">_read_status</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">281</span>         <span class="n">line</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fp</span><span class="o">.</span><span class="n">readline</span><span class="p">(</span><span class="n">_MAXLINE</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;iso-8859-1&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">282</span>         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">_MAXLINE</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">283</span>             <span class="k">raise</span> <span class="n">LineTooLong</span><span class="p">(</span><span class="s2">&quot;status line&quot;</span><span class="p">)</span>
+<span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/util/ssl_.py</span> in <span class="ni">_ssl_wrap_socket_impl</span><span class="nt">(sock, ssl_context, tls_in_tls, server_hostname)</span>
+<span class="g g-Whitespace">    </span><span class="mi">491</span> 
+<span class="g g-Whitespace">    </span><span class="mi">492</span>     <span class="k">if</span> <span class="n">server_hostname</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">493</span>         <span class="k">return</span> <span class="n">ssl_context</span><span class="o">.</span><span class="n">wrap_socket</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span> <span class="n">server_hostname</span><span class="o">=</span><span class="n">server_hostname</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">494</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">495</span>         <span class="k">return</span> <span class="n">ssl_context</span><span class="o">.</span><span class="n">wrap_socket</span><span class="p">(</span><span class="n">sock</span><span class="p">)</span>
 
-<span class="nn">/usr/lib/python3.9/socket.py</span> in <span class="ni">readinto</span><span class="nt">(self, b)</span>
-<span class="g g-Whitespace">    </span><span class="mi">702</span>         <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">703</span>             <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">704</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sock</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">705</span>             <span class="k">except</span> <span class="n">timeout</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">706</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_timeout_occurred</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="nn">/usr/lib/python3.9/ssl.py</span> in <span class="ni">wrap_socket</span><span class="nt">(self, sock, server_side, do_handshake_on_connect, suppress_ragged_eofs, server_hostname, session)</span>
+<span class="g g-Whitespace">    </span><span class="mi">499</span>         <span class="c1"># SSLSocket class handles server_hostname encoding before it calls</span>
+<span class="g g-Whitespace">    </span><span class="mi">500</span>         <span class="c1"># ctx._wrap_socket()</span>
+<span class="ne">--&gt; </span><span class="mi">501</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">sslsocket_class</span><span class="o">.</span><span class="n">_create</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">502</span>             <span class="n">sock</span><span class="o">=</span><span class="n">sock</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">503</span>             <span class="n">server_side</span><span class="o">=</span><span class="n">server_side</span><span class="p">,</span>
 
-<span class="nn">/usr/lib/python3.9/ssl.py</span> in <span class="ni">recv_into</span><span class="nt">(self, buffer, nbytes, flags)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1240</span>                   <span class="s2">&quot;non-zero flags not allowed in calls to recv_into() on </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span>
-<span class="g g-Whitespace">   </span><span class="mi">1241</span>                   <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1242</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">nbytes</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1243</span>         <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1244</span>             <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">nbytes</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
+<span class="nn">/usr/lib/python3.9/ssl.py</span> in <span class="ni">_create</span><span class="nt">(cls, sock, server_side, do_handshake_on_connect, suppress_ragged_eofs, server_hostname, context, session)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1039</span>                         <span class="c1"># non-blocking</span>
+<span class="g g-Whitespace">   </span><span class="mi">1040</span>                         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;do_handshake_on_connect should not be specified for non-blocking sockets&quot;</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1041</span>                     <span class="bp">self</span><span class="o">.</span><span class="n">do_handshake</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1042</span>             <span class="k">except</span> <span class="p">(</span><span class="ne">OSError</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1043</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
-<span class="nn">/usr/lib/python3.9/ssl.py</span> in <span class="ni">read</span><span class="nt">(self, len, buffer)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1098</span>         <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1099</span>             <span class="k">if</span> <span class="n">buffer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1100</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1101</span>             <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1102</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
+<span class="nn">/usr/lib/python3.9/ssl.py</span> in <span class="ni">do_handshake</span><span class="nt">(self, block)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1308</span>             <span class="k">if</span> <span class="n">timeout</span> <span class="o">==</span> <span class="mf">0.0</span> <span class="ow">and</span> <span class="n">block</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1309</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">settimeout</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1310</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">do_handshake</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1311</span>         <span class="k">finally</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1312</span>             <span class="bp">self</span><span class="o">.</span><span class="n">settimeout</span><span class="p">(</span><span class="n">timeout</span><span class="p">)</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
@@ -1010,340 +1012,6 @@ Requirement already satisfied: pycparser in /usr/local/lib/python3.9/dist-packag
 </div>
 </div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="pipeline">
-<h1>PipeLine<a class="headerlink" href="#pipeline" title="Permalink to this heading">#</a></h1>
-<p><strong>Instalasi Library</strong></p>
-<ul class="simple">
-<li><p>menginstall beberapa library yang dibutuhkan</p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>mysqlclient
-<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>mysql-connector-python
-<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>pymysql
-<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>pyodbc
-<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>psycopg2
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Collecting mysqlclient
-  Downloading mysqlclient-2.1.1.tar.gz (88 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">88.1/88.1 KB</span> <span class=" -Color -Color-Red">3.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25h  Preparing metadata (setup.py) ... ?25l?25hdone
-Building wheels for collected packages: mysqlclient
-  Building wheel for mysqlclient (setup.py) ... ?25l?25hdone
-  Created wheel for mysqlclient: filename=mysqlclient-2.1.1-cp38-cp38-linux_x86_64.whl size=109200 sha256=4a9c27898bca422f07ab5de00e8a759b2c643557c5450135061032d32d83cf08
-  Stored in directory: /root/.cache/pip/wheels/5b/e1/84/a6185eaec318899f59a32d393af7729a0719cd93695d71f9a1
-Successfully built mysqlclient
-Installing collected packages: mysqlclient
-Successfully installed mysqlclient-2.1.1
-Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Collecting mysql-connector-python
-  Downloading mysql_connector_python-8.0.32-cp38-cp38-manylinux1_x86_64.whl (23.5 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">23.5/23.5 MB</span> <span class=" -Color -Color-Red">73.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hRequirement already satisfied: protobuf&lt;=3.20.3,&gt;=3.11.0 in /usr/local/lib/python3.8/dist-packages (from mysql-connector-python) (3.19.6)
-Installing collected packages: mysql-connector-python
-Successfully installed mysql-connector-python-8.0.32
-Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Collecting pymysql
-  Downloading PyMySQL-1.0.2-py3-none-any.whl (43 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">43.8/43.8 KB</span> <span class=" -Color -Color-Red">2.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hInstalling collected packages: pymysql
-Successfully installed pymysql-1.0.2
-Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Collecting pyodbc
-  Downloading pyodbc-4.0.35-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (333 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">333.2/333.2 KB</span> <span class=" -Color -Color-Red">8.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hInstalling collected packages: pyodbc
-Successfully installed pyodbc-4.0.35
-Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: psycopg2 in /usr/local/lib/python3.8/dist-packages (2.9.5)
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Mengambil data Iris dari SQL Server</strong></p>
-<ul class="simple">
-<li><p>Mendefine engine yang nantinya akan terhubung dengan SQL Server</p></li>
-<li><p>Melakukan select semua data pada tabel iris</p></li>
-<li><p>Pada tabel di database ini terdapat kolom id dan petalwidth</p></li>
-<li><p>Lalu menampilkan data menggunakan looping for</p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyodbc</span> 
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">cnxn_str</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Driver={odbc driver 17 for sql server};&quot;</span>
-            <span class="s2">&quot;Server=DESKTOP-JAFQH21\SQLEXPRESS;&quot;</span>
-            <span class="s2">&quot;Database=prosain200411100186;&quot;</span>
-            <span class="s2">&quot;Trusted_Connection=yes;&quot;</span><span class="p">)</span>
-<span class="n">cnxn</span> <span class="o">=</span> <span class="n">pyodbc</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">cnxn_str</span><span class="p">)</span>
-<span class="n">cursor</span> <span class="o">=</span> <span class="n">cnxn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>	
-<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM iris&quot;</span><span class="p">)</span> 
-<span class="n">row</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span> 
-<span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-<span class="n">data</span><span class="o">=</span><span class="p">[]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">row</span><span class="p">:</span>
-    <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">),</span><span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">),</span><span class="n">i</span><span class="p">[</span><span class="mi">2</span><span class="p">]])</span>
-<span class="n">df_sqlServer</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">,</span><span class="s1">&#39;petalwidth&#39;</span><span class="p">,</span><span class="s1">&#39;class&#39;</span><span class="p">])</span>
-<span class="n">df_sqlServer</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Mengambil data Iris dari Elephant</strong></p>
-<ul class="simple">
-<li><p>Mendefine engine yang nantinya akan terhubung dengan database di Elephant</p></li>
-<li><p>Melakukan select semua data pada tabel iris</p></li>
-<li><p>Pada tabel di database ini terdapat kolom id dan sepalwidth</p></li>
-<li><p>Lalu menampilkan data menggunakan dataframe</p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">psycopg2</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="c1"># Connection parameters, yours will be different</span>
-<span class="n">param_dic</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;host&quot;</span>      <span class="p">:</span> <span class="s2">&quot;floppy.db.elephantsql.com&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;database&quot;</span>  <span class="p">:</span> <span class="s2">&quot;qdbpvmbb&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;user&quot;</span>      <span class="p">:</span> <span class="s2">&quot;qdbpvmbb&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;password&quot;</span>  <span class="p">:</span> <span class="s2">&quot;qp3SRwpNs9sDtpF-e2xb4O913yIGPlCH&quot;</span>
-<span class="p">}</span>
-<span class="k">def</span> <span class="nf">connect</span><span class="p">(</span><span class="n">params_dic</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot; Connect to the PostgreSQL database server &quot;&quot;&quot;</span>
-    <span class="n">conn</span> <span class="o">=</span> <span class="kc">None</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="c1"># connect to the PostgreSQL server</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Connecting to the PostgreSQL database...&#39;</span><span class="p">)</span>
-        <span class="n">conn</span> <span class="o">=</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="o">**</span><span class="n">params_dic</span><span class="p">)</span>
-    <span class="k">except</span> <span class="p">(</span><span class="ne">Exception</span><span class="p">,</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">DatabaseError</span><span class="p">)</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
-        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> 
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Connection successful&quot;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">conn</span>
-
-<span class="k">def</span> <span class="nf">postgresql_to_dataframe</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">select_query</span><span class="p">,</span> <span class="n">column_names</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Tranform a SELECT query into a pandas dataframe</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">select_query</span><span class="p">)</span>
-    <span class="k">except</span> <span class="p">(</span><span class="ne">Exception</span><span class="p">,</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">DatabaseError</span><span class="p">)</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">error</span><span class="p">)</span>
-        <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-        <span class="k">return</span> <span class="mi">1</span>
-    
-    <span class="c1"># Naturally we get a list of tupples</span>
-    <span class="n">tupples</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
-    <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-    
-    <span class="c1"># We just need to turn it into a pandas dataframe</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">tupples</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">column_names</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">df</span>
-
-<span class="c1"># Connect to the database</span>
-<span class="n">conn</span> <span class="o">=</span> <span class="n">connect</span><span class="p">(</span><span class="n">param_dic</span><span class="p">)</span>
-
-<span class="n">column_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">,</span><span class="s1">&#39;sepalwidth&#39;</span><span class="p">]</span>
-
-<span class="n">df_postEle</span> <span class="o">=</span> <span class="n">postgresql_to_dataframe</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;select * from iris&quot;</span><span class="p">,</span> <span class="n">column_names</span><span class="p">)</span>
-<span class="n">df_postEle</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Mengambil data Iris dari PostgreSQL Lokal</strong></p>
-<ul class="simple">
-<li><p>Mendefine engine yang nantinya akan terhubung dengan database PostgreSQL</p></li>
-<li><p>Melakukan select semua data pada tabel iris</p></li>
-<li><p>Pada tabel di database ini terdapat kolom id dan sepallength</p></li>
-<li><p>Lalu menampilkan data menggunakan dataframe</p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">psycopg2</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="c1"># Connection parameters, yours will be different</span>
-<span class="n">param_dic</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;host&quot;</span>      <span class="p">:</span> <span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;database&quot;</span>  <span class="p">:</span> <span class="s2">&quot;prosain200411100186&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;user&quot;</span>      <span class="p">:</span> <span class="s2">&quot;postgres&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;password&quot;</span>  <span class="p">:</span> <span class="s2">&quot;123&quot;</span>
-<span class="p">}</span>
-<span class="k">def</span> <span class="nf">connect</span><span class="p">(</span><span class="n">params_dic</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot; Connect to the PostgreSQL database server &quot;&quot;&quot;</span>
-    <span class="n">conn</span> <span class="o">=</span> <span class="kc">None</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="c1"># connect to the PostgreSQL server</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Connecting to the PostgreSQL database...&#39;</span><span class="p">)</span>
-        <span class="n">conn</span> <span class="o">=</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="o">**</span><span class="n">params_dic</span><span class="p">)</span>
-    <span class="k">except</span> <span class="p">(</span><span class="ne">Exception</span><span class="p">,</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">DatabaseError</span><span class="p">)</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
-        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> 
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Connection successful&quot;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">conn</span>
-
-<span class="k">def</span> <span class="nf">postgresql_to_dataframe</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">select_query</span><span class="p">,</span> <span class="n">column_names</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Tranform a SELECT query into a pandas dataframe</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">select_query</span><span class="p">)</span>
-    <span class="k">except</span> <span class="p">(</span><span class="ne">Exception</span><span class="p">,</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">DatabaseError</span><span class="p">)</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">error</span><span class="p">)</span>
-        <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-        <span class="k">return</span> <span class="mi">1</span>
-    
-    <span class="c1"># Naturally we get a list of tupples</span>
-    <span class="n">tupples</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
-    <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-    
-    <span class="c1"># We just need to turn it into a pandas dataframe</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">tupples</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">column_names</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">df</span>
-
-<span class="c1"># Connect to the database</span>
-<span class="n">conn</span> <span class="o">=</span> <span class="n">connect</span><span class="p">(</span><span class="n">param_dic</span><span class="p">)</span>
-
-<span class="n">column_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">,</span><span class="s1">&#39;sepallength&#39;</span><span class="p">]</span>
-
-<span class="n">df_postLocal</span> <span class="o">=</span> <span class="n">postgresql_to_dataframe</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;select * from iris&quot;</span><span class="p">,</span> <span class="n">column_names</span><span class="p">)</span>
-<span class="n">df_postLocal</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Mengambil data Iris dari MySQL</strong></p>
-<ul class="simple">
-<li><p>Mendefine engine yang nantinya akan terhubung dengan database di MySQL</p></li>
-<li><p>Melakukan select semua data pada tabel iris</p></li>
-<li><p>Pada tabel di database ini terdapat kolom id dan petallength</p></li>
-<li><p>Lalu menampilkan data menggunakan dataframe</p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">mysql.connector</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-
-<span class="n">mydb</span> <span class="o">=</span> <span class="n">mysql</span><span class="o">.</span><span class="n">connector</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
-  <span class="n">host</span><span class="o">=</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
-  <span class="n">user</span><span class="o">=</span><span class="s2">&quot;root&quot;</span><span class="p">,</span>
-  <span class="n">password</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-  <span class="n">database</span><span class="o">=</span><span class="s2">&quot;prosain200411100186&quot;</span>
-<span class="p">)</span>
-
-<span class="n">mycursor</span> <span class="o">=</span> <span class="n">mydb</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-
-<span class="n">mycursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM iris&quot;</span><span class="p">)</span>
-
-<span class="n">myresult</span> <span class="o">=</span> <span class="n">mycursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
-<span class="n">mycursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-<span class="n">df_mysql</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">myresult</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">,</span><span class="s1">&#39;petallength&#39;</span><span class="p">])</span>
-<span class="c1"># df_mysql.drop(df_mysql.columns[[0]],axis=1,inplace=True)</span>
-<span class="n">df_mysql</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menggabungkan data dari setiap database yg telah diakses sebelumnya</span>
-<span class="n">result</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_postLocal</span><span class="p">,</span> <span class="n">df_postEle</span><span class="p">,</span><span class="n">df_mysql</span><span class="p">,</span> <span class="n">df_sqlServer</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="c1"># result = pd.merge(df_postLocal,df_sqlServer, how=&quot;inner&quot;, on=[&quot;id&quot;, &quot;id&quot;])</span>
-<span class="n">result</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#melakukan drop kolom id</span>
-<span class="n">result</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">columns</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">]],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">result</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#memisah data untuk X dan Y</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">values</span><span class="p">[:,</span> <span class="p">:</span><span class="mi">4</span><span class="p">]</span>
-<span class="n">Y</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">values</span><span class="p">[:,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#membagi data training dan data testing</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span> 
-    <span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Mengimplementasikan metode Desicion Tree</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
-<span class="n">classifier</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">()</span>
-<span class="n">classifier</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#mendefine variable y prediksi</span>
-<span class="n">y_pred</span> <span class="o">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Menghitung nilai akurasi</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
-<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot; DecisionTree Accuracy : &quot;</span><span class="p">,</span>
-    <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_pred</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Mengimplementasikan metode KNN</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
-<span class="n">classifier</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-<span class="n">classifier</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#mendefine variable y prediksi</span>
-<span class="n">y_pred</span> <span class="o">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Menghitung akurasi</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot; KNN Accuracy : &quot;</span><span class="p">,</span>
-    <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_pred</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
 
     <script type="text/x-thebe-config">
     {
@@ -1406,15 +1074,10 @@ Requirement already satisfied: psycopg2 in /usr/local/lib/python3.8/dist-package
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Crawling Data (Task 1)</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1-crawling-data-from-twitter-according-location">Task 1 (Crawling Data From Twitter according Location)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-crawling-data-from-website-detik-com">Task 2 (Crawling Data From Website detik.com)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3-scraping-data-from-pta-trunojoyo-ac-id">Task 3 (Scraping Data from pta.trunojoyo.ac.id)</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pipeline">PipeLine</a></li>
-</ul>
-
   </nav></div>
 
 </div></div>
