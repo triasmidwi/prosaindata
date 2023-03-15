@@ -63,6 +63,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'Pipeline';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="PCA" href="PCA.html" />
     <link rel="prev" title="Crawling Data (Task 1)" href="ScrapingData.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -157,6 +158,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="ScrapingData.html">Crawling Data (Task 1)</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">PipeLine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PCA.html"><strong>PCA</strong></a></li>
 </ul>
 
     </div>
@@ -405,31 +407,19 @@ document.write(`
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>mysqlclient
-<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>mysql
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># !pip install mysqlclient</span>
+<span class="c1"># !pip install mysql</span>
 <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>mysql-connector-python
-<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>pymysql
-<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>pyodbc
+<span class="c1"># !pip install pymysql</span>
+<span class="c1"># !pip install pyodbc</span>
 <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>psycopg2
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: mysqlclient in /usr/local/lib/python3.9/dist-packages (2.1.1)
-Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Collecting mysql
-  Downloading mysql-0.0.3-py3-none-any.whl (1.2 kB)
-Requirement already satisfied: mysqlclient in /usr/local/lib/python3.9/dist-packages (from mysql) (2.1.1)
-Installing collected packages: mysql
-Successfully installed mysql-0.0.3
-Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
 Requirement already satisfied: mysql-connector-python in /usr/local/lib/python3.9/dist-packages (8.0.32)
 Requirement already satisfied: protobuf&lt;=3.20.3,&gt;=3.11.0 in /usr/local/lib/python3.9/dist-packages (from mysql-connector-python) (3.19.6)
-Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: pymysql in /usr/local/lib/python3.9/dist-packages (1.0.2)
-Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: pyodbc in /usr/local/lib/python3.9/dist-packages (4.0.35)
 Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
 Requirement already satisfied: psycopg2 in /usr/local/lib/python3.9/dist-packages (2.9.5)
 </pre></div>
@@ -472,7 +462,7 @@ Requirement already satisfied: psycopg2 in /usr/local/lib/python3.9/dist-package
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-0498966f-c4e6-4dac-8db9-03b0c8e71b0b">
+  <div id="df-a7dbab16-b239-4f42-a90b-13a3c4a59054">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -556,7 +546,7 @@ Requirement already satisfied: psycopg2 in /usr/local/lib/python3.9/dist-package
 </table>
 <p>150 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-0498966f-c4e6-4dac-8db9-03b0c8e71b0b')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-a7dbab16-b239-4f42-a90b-13a3c4a59054')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -607,12 +597,12 @@ Requirement already satisfied: psycopg2 in /usr/local/lib/python3.9/dist-package
 
       <script>
         const buttonEl =
-          document.querySelector('#df-0498966f-c4e6-4dac-8db9-03b0c8e71b0b button.colab-df-convert');
+          document.querySelector('#df-a7dbab16-b239-4f42-a90b-13a3c4a59054 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-0498966f-c4e6-4dac-8db9-03b0c8e71b0b');
+          const element = document.querySelector('#df-a7dbab16-b239-4f42-a90b-13a3c4a59054');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -699,7 +689,7 @@ Connection successful
 </pre></div>
 </div>
 <div class="output text_html">
-  <div id="df-2d922f82-ed40-4b14-8ddc-94e6d50ab1ca">
+  <div id="df-3c291c57-f545-4749-a54b-7f0f32a77662">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -771,7 +761,7 @@ Connection successful
 </table>
 <p>150 rows × 1 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-2d922f82-ed40-4b14-8ddc-94e6d50ab1ca')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-3c291c57-f545-4749-a54b-7f0f32a77662')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -822,12 +812,12 @@ Connection successful
 
       <script>
         const buttonEl =
-          document.querySelector('#df-2d922f82-ed40-4b14-8ddc-94e6d50ab1ca button.colab-df-convert');
+          document.querySelector('#df-3c291c57-f545-4749-a54b-7f0f32a77662 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-2d922f82-ed40-4b14-8ddc-94e6d50ab1ca');
+          const element = document.querySelector('#df-3c291c57-f545-4749-a54b-7f0f32a77662');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -850,7 +840,7 @@ Connection successful
 </div>
 <p><strong>Mengambil data Iris dari PostgreSQL Lokal</strong></p>
 <ul class="simple">
-<li><p>Mendefine engine yang nantinya akan terhubung dengan database PostgreSQL</p></li>
+<li><p>Melakukan load data iris pada gdrive</p></li>
 <li><p>Melakukan select semua data pada tabel iris</p></li>
 <li><p>Pada tabel di database ini terdapat kolom id dan sepallength</p></li>
 <li><p>Lalu menampilkan data menggunakan dataframe</p></li>
@@ -875,7 +865,7 @@ Connection successful
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-c2d17704-b8e4-438c-84d7-92b9d5dd9046">
+  <div id="df-195432f6-8015-4107-b06f-df3100a4f0a0">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -947,7 +937,7 @@ Connection successful
 </table>
 <p>150 rows × 1 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-c2d17704-b8e4-438c-84d7-92b9d5dd9046')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-195432f6-8015-4107-b06f-df3100a4f0a0')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -998,12 +988,12 @@ Connection successful
 
       <script>
         const buttonEl =
-          document.querySelector('#df-c2d17704-b8e4-438c-84d7-92b9d5dd9046 button.colab-df-convert');
+          document.querySelector('#df-195432f6-8015-4107-b06f-df3100a4f0a0 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-c2d17704-b8e4-438c-84d7-92b9d5dd9046');
+          const element = document.querySelector('#df-195432f6-8015-4107-b06f-df3100a4f0a0');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1033,7 +1023,7 @@ Connection successful
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mydb</span> <span class="o">=</span> <span class="n">pymysql</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mydb</span> <span class="o">=</span> <span class="n">mysql</span><span class="o">.</span><span class="n">connector</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
   <span class="n">host</span><span class="o">=</span><span class="s2">&quot;sql12.freesqldatabase.com&quot;</span><span class="p">,</span>
   <span class="n">user</span><span class="o">=</span><span class="s2">&quot;sql12605513&quot;</span><span class="p">,</span>
   <span class="n">password</span><span class="o">=</span><span class="s2">&quot;qPVHlJBcbK&quot;</span><span class="p">,</span>
@@ -1054,7 +1044,7 @@ Connection successful
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-92013ccd-59dd-4cf1-b74a-23f7cb7df545">
+  <div id="df-8c76bde9-35a2-44f0-a652-1e19e744c6d0">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1126,7 +1116,7 @@ Connection successful
 </table>
 <p>150 rows × 1 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-92013ccd-59dd-4cf1-b74a-23f7cb7df545')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-8c76bde9-35a2-44f0-a652-1e19e744c6d0')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1177,12 +1167,12 @@ Connection successful
 
       <script>
         const buttonEl =
-          document.querySelector('#df-92013ccd-59dd-4cf1-b74a-23f7cb7df545 button.colab-df-convert');
+          document.querySelector('#df-8c76bde9-35a2-44f0-a652-1e19e744c6d0 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-92013ccd-59dd-4cf1-b74a-23f7cb7df545');
+          const element = document.querySelector('#df-8c76bde9-35a2-44f0-a652-1e19e744c6d0');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1213,7 +1203,7 @@ Connection successful
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-6c2a29e7-f0ce-4bd6-a535-efe88de0eeee">
+  <div id="df-19a5e3fb-4ff9-4841-8828-19b4afe9ed29">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1333,7 +1323,7 @@ Connection successful
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-6c2a29e7-f0ce-4bd6-a535-efe88de0eeee')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-19a5e3fb-4ff9-4841-8828-19b4afe9ed29')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1384,12 +1374,12 @@ Connection successful
 
       <script>
         const buttonEl =
-          document.querySelector('#df-6c2a29e7-f0ce-4bd6-a535-efe88de0eeee button.colab-df-convert');
+          document.querySelector('#df-19a5e3fb-4ff9-4841-8828-19b4afe9ed29 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-6c2a29e7-f0ce-4bd6-a535-efe88de0eeee');
+          const element = document.querySelector('#df-19a5e3fb-4ff9-4841-8828-19b4afe9ed29');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1692,6 +1682,15 @@ Connection successful
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">Crawling Data (Task 1)</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="PCA.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><strong>PCA</strong></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
