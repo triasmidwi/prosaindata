@@ -362,8 +362,6 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-pca"><strong>Implementasi PCA</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengimplementasikan-metode-desicion-tree"><strong>Mengimplementasikan metode Desicion Tree</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengimplementasikan-metode-knn"><strong>Mengimplementasikan metode KNN</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi-model-knn">Evaluasi model KNN</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#word-embedding-word2vec-cbow">Word Embedding Word2vec CBOW</a></li>
 </ul>
             </nav>
         </div>
@@ -2022,16 +2020,6 @@ Connection successful
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Splitting the dataset into the Training set and Test set</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
-
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">Y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
 </div>
 <div class="section" id="mengimplementasikan-metode-desicion-tree">
 <h2><strong>Mengimplementasikan metode Desicion Tree</strong><a class="headerlink" href="#mengimplementasikan-metode-desicion-tree" title="Permalink to this heading">#</a></h2>
@@ -2106,67 +2094,6 @@ Connection successful
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> KNN Accuracy :  100.0
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="evaluasi-model-knn">
-<h2>Evaluasi model KNN<a class="headerlink" href="#evaluasi-model-knn" title="Permalink to this heading">#</a></h2>
-</div>
-<div class="section" id="word-embedding-word2vec-cbow">
-<h2>Word Embedding Word2vec CBOW<a class="headerlink" href="#word-embedding-word2vec-cbow" title="Permalink to this heading">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gensim</span>
-<span class="kn">from</span> <span class="nn">gensim.models</span> <span class="kn">import</span> <span class="n">Word2Vec</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create CBOW model</span>
-<span class="n">model1</span> <span class="o">=</span> <span class="n">gensim</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">Word2Vec</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;stemming&#39;</span><span class="p">],</span> <span class="n">min_count</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
-                              <span class="n">vector_size</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">window</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span>
- 
-<span class="c1"># Print results</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cosine similarity between &#39;teknologi&#39; &quot;</span> <span class="o">+</span>
-               <span class="s2">&quot;and &#39;system&#39; - CBOW : &quot;</span><span class="p">,</span>
-    <span class="n">model1</span><span class="o">.</span><span class="n">wv</span><span class="o">.</span><span class="n">similarity</span><span class="p">(</span><span class="s1">&#39;teknologi&#39;</span><span class="p">,</span> <span class="s1">&#39;system&#39;</span><span class="p">))</span>
-     
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cosine similarity between &#39;teknologi&#39; &quot;</span> <span class="o">+</span>
-                 <span class="s2">&quot;and &#39;mobile&#39; - CBOW : &quot;</span><span class="p">,</span>
-      <span class="n">model1</span><span class="o">.</span><span class="n">wv</span><span class="o">.</span><span class="n">similarity</span><span class="p">(</span><span class="s1">&#39;teknologi&#39;</span><span class="p">,</span> <span class="s1">&#39;mobile&#39;</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cosine similarity between &#39;teknologi&#39; and &#39;system&#39; - CBOW :  0.9751864
-Cosine similarity between &#39;teknologi&#39; and &#39;mobile&#39; - CBOW :  0.9954184
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#getting similar word</span>
-<span class="n">sim_words</span> <span class="o">=</span> <span class="n">model1</span><span class="o">.</span><span class="n">wv</span><span class="o">.</span><span class="n">most_similar</span><span class="p">(</span><span class="s1">&#39;teknologi&#39;</span><span class="p">)</span>
-<span class="n">sim_words</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;pesat&#39;, 0.9985315799713135),
- (&#39;kembang&#39;, 0.9983527064323425),
- (&#39;media&#39;, 0.9958352446556091),
- (&#39;mobile&#39;, 0.9954184293746948),
- (&#39;interaktif&#39;, 0.9953532814979553),
- (&#39;didik&#39;, 0.9945164322853088),
- (&#39;augmented&#39;, 0.9942187666893005),
- (&#39;reality&#39;, 0.9940503835678101),
- (&#39;informasi&#39;, 0.9937862157821655),
- (&#39;android&#39;, 0.9931567311286926)]
 </pre></div>
 </div>
 </div>
@@ -2249,8 +2176,6 @@ Cosine similarity between &#39;teknologi&#39; and &#39;mobile&#39; - CBOW :  0.9
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-pca"><strong>Implementasi PCA</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengimplementasikan-metode-desicion-tree"><strong>Mengimplementasikan metode Desicion Tree</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengimplementasikan-metode-knn"><strong>Mengimplementasikan metode KNN</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi-model-knn">Evaluasi model KNN</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#word-embedding-word2vec-cbow">Word Embedding Word2vec CBOW</a></li>
 </ul>
   </nav></div>
 
