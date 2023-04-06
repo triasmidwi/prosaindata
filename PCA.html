@@ -18,12 +18,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -37,8 +37,8 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -160,6 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Pipeline.html">PipeLine</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>PCA</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Data%20Time%20Series.html">Data time series</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UTS.html">UTS</a></li>
 </ul>
 
     </div>
@@ -362,6 +363,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengimplementasikan-metode-desicion-tree"><strong>Mengimplementasikan metode Desicion Tree</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengimplementasikan-metode-knn"><strong>Mengimplementasikan metode KNN</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi-model-knn">Evaluasi model KNN</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#word-embedding-word2vec-cbow">Word Embedding Word2vec CBOW</a></li>
 </ul>
             </nav>
         </div>
@@ -396,7 +398,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">91874</span><span class="n">b305a32</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="nn">&lt;ipython-input-1-91874b305a32&gt;</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive/&#39;</span><span class="p">)</span>
 
@@ -2112,6 +2114,64 @@ Connection successful
 <div class="section" id="evaluasi-model-knn">
 <h2>Evaluasi model KNN<a class="headerlink" href="#evaluasi-model-knn" title="Permalink to this heading">#</a></h2>
 </div>
+<div class="section" id="word-embedding-word2vec-cbow">
+<h2>Word Embedding Word2vec CBOW<a class="headerlink" href="#word-embedding-word2vec-cbow" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gensim</span>
+<span class="kn">from</span> <span class="nn">gensim.models</span> <span class="kn">import</span> <span class="n">Word2Vec</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create CBOW model</span>
+<span class="n">model1</span> <span class="o">=</span> <span class="n">gensim</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">Word2Vec</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;stemming&#39;</span><span class="p">],</span> <span class="n">min_count</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+                              <span class="n">vector_size</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">window</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span>
+ 
+<span class="c1"># Print results</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cosine similarity between &#39;teknologi&#39; &quot;</span> <span class="o">+</span>
+               <span class="s2">&quot;and &#39;system&#39; - CBOW : &quot;</span><span class="p">,</span>
+    <span class="n">model1</span><span class="o">.</span><span class="n">wv</span><span class="o">.</span><span class="n">similarity</span><span class="p">(</span><span class="s1">&#39;teknologi&#39;</span><span class="p">,</span> <span class="s1">&#39;system&#39;</span><span class="p">))</span>
+     
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cosine similarity between &#39;teknologi&#39; &quot;</span> <span class="o">+</span>
+                 <span class="s2">&quot;and &#39;mobile&#39; - CBOW : &quot;</span><span class="p">,</span>
+      <span class="n">model1</span><span class="o">.</span><span class="n">wv</span><span class="o">.</span><span class="n">similarity</span><span class="p">(</span><span class="s1">&#39;teknologi&#39;</span><span class="p">,</span> <span class="s1">&#39;mobile&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cosine similarity between &#39;teknologi&#39; and &#39;system&#39; - CBOW :  0.9751864
+Cosine similarity between &#39;teknologi&#39; and &#39;mobile&#39; - CBOW :  0.9954184
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#getting similar word</span>
+<span class="n">sim_words</span> <span class="o">=</span> <span class="n">model1</span><span class="o">.</span><span class="n">wv</span><span class="o">.</span><span class="n">most_similar</span><span class="p">(</span><span class="s1">&#39;teknologi&#39;</span><span class="p">)</span>
+<span class="n">sim_words</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;pesat&#39;, 0.9985315799713135),
+ (&#39;kembang&#39;, 0.9983527064323425),
+ (&#39;media&#39;, 0.9958352446556091),
+ (&#39;mobile&#39;, 0.9954184293746948),
+ (&#39;interaktif&#39;, 0.9953532814979553),
+ (&#39;didik&#39;, 0.9945164322853088),
+ (&#39;augmented&#39;, 0.9942187666893005),
+ (&#39;reality&#39;, 0.9940503835678101),
+ (&#39;informasi&#39;, 0.9937862157821655),
+ (&#39;android&#39;, 0.9931567311286926)]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -2140,7 +2200,10 @@ Connection successful
               
               
                 <footer class="bd-footer-article">
-                  <!-- Previous / next buttons -->
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="Pipeline.html"
@@ -2160,7 +2223,10 @@ Connection successful
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -2184,6 +2250,7 @@ Connection successful
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengimplementasikan-metode-desicion-tree"><strong>Mengimplementasikan metode Desicion Tree</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengimplementasikan-metode-knn"><strong>Mengimplementasikan metode KNN</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi-model-knn">Evaluasi model KNN</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#word-embedding-word2vec-cbow">Word Embedding Word2vec CBOW</a></li>
 </ul>
   </nav></div>
 
@@ -2192,7 +2259,7 @@ Connection successful
             
           </div>
           <footer class="bd-footer-content">
-            <div class="bd-footer-content__inner">
+            
 <div class="bd-footer-content__inner container">
   
   <div class="footer-item">
@@ -2222,7 +2289,7 @@ By The Jupyter Book Community
     
   </div>
   
-</div></div>
+</div>
           </footer>
         
 
@@ -2231,8 +2298,8 @@ By The Jupyter Book Community
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>
