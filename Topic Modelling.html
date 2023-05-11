@@ -4244,20 +4244,20 @@ Name: review_token, Length: 1704, dtype: object
 <p>Pada tahap ini yang dilakukan yaitu normalisasi pada data. Hal tersebut dilakukan untuk merubah kata yang tidak baku menjadi kata baku</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Normalisasi kata tidak baku</span>
-<span class="n">normalize</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;tugas/Dataset/Normalization Data.xlsx&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># #Normalisasi kata tidak baku</span>
+<span class="c1"># normalize = pd.read_excel(&quot;tugas/Dataset/Normalization Data.xlsx&quot;)</span>
 
-<span class="n">normalize_word_dict</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="c1"># normalize_word_dict = {}</span>
 
-<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">normalize</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
-  <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">normalize_word_dict</span><span class="p">:</span>
-    <span class="n">normalize_word_dict</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="c1"># for row in normalize.iterrows():</span>
+<span class="c1">#   if row[0] not in normalize_word_dict:</span>
+<span class="c1">#     normalize_word_dict[row[0]] = row[1]</span>
 
-<span class="k">def</span> <span class="nf">normalized_term</span><span class="p">(</span><span class="n">comment</span><span class="p">):</span>
-  <span class="k">return</span> <span class="p">[</span><span class="n">normalize_word_dict</span><span class="p">[</span><span class="n">term</span><span class="p">]</span> <span class="k">if</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">normalize_word_dict</span> <span class="k">else</span> <span class="n">term</span> <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">comment</span><span class="p">]</span>
+<span class="c1"># def normalized_term(comment):</span>
+<span class="c1">#   return [normalize_word_dict[term] if term in normalize_word_dict else term for term in comment]</span>
 
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;comment_normalize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;review_token&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">normalized_term</span><span class="p">)</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;comment_normalize&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="c1"># df[&#39;comment_normalize&#39;] = df[&#39;review_token&#39;].apply(normalized_term)</span>
+<span class="c1"># df[&#39;comment_normalize&#39;].head(20)</span>
 </pre></div>
 </div>
 </div>
@@ -4339,16 +4339,16 @@ Name: stopwords_removal, dtype: object
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#stopword removal 2</span>
-<span class="n">data_stopwords</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;tugas/Dataset/list_stopwords.xlsx&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">data_stopwords</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># #stopword removal 2</span>
+<span class="c1"># data_stopwords = pd.read_excel(&quot;tugas/Dataset/list_stopwords.xlsx&quot;)</span>
+<span class="c1"># print(data_stopwords)</span>
 
-<span class="k">def</span> <span class="nf">stopwords_removal2</span><span class="p">(</span><span class="nb">filter</span><span class="p">)</span> <span class="p">:</span>
-  <span class="nb">filter</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="nb">filter</span> <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">data_stopwords</span><span class="p">]</span>
-  <span class="k">return</span> <span class="nb">filter</span>
+<span class="c1"># def stopwords_removal2(filter) :</span>
+<span class="c1">#   filter = [word for word in filter if word not in data_stopwords]</span>
+<span class="c1">#   return filter</span>
 
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;stopwords_removal_final&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;stopwords_removal&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">stopwords_removal2</span><span class="p">)</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;stopwords_removal_final&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="c1"># df[&#39;stopwords_removal_final&#39;] = df[&#39;stopwords_removal&#39;].apply(stopwords_removal2)</span>
+<span class="c1"># df[&#39;stopwords_removal_final&#39;].head(20)</span>
 </pre></div>
 </div>
 </div>
