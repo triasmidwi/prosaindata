@@ -30,7 +30,8 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-from google.colab import drive
-drive.mount('/content/drive')
+['#proses stem', 'from Sastrawi.Stemmer.StemmerFactory import StemmerFactory', '# from Sastrawi.Stemmer.StemmerFactory import StemmerFactory', 'import string', 'import swifter']
+...
+['for term in term_dict.keys():', '  term_dict[term] = stemming(term)', '', 'def get_stemming(document):', '  return [term_dict[term] for term in document]']
 -------------------
 
